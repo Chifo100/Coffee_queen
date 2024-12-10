@@ -1,0 +1,27 @@
+#Ignore copying these files to Github
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual Environment
+venv/
+.env/
+
+# Django
+*.log
+*.pot
+*.pyc
+
+# Database
+db.sqlite3
+
+# Media
+/media/
+
+# Static
+/static/
+
+# Other
+*.DS_Store
+

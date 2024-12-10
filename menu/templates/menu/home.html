@@ -1,0 +1,50 @@
+#Home page HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Queen</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            color: #3a3a3a;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .menu-item {
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .crowd-level {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Coffee Queen</h1>
+
+    <h2>Menu</h2>
+    <div class="menu">
+        {% for coffee in coffees %}
+            <div class="menu-item">
+                <h3>{{ coffee.name }}</h3>
+                <p>{{ coffee.description }}</p>
+                <p><strong>Price: ${{ coffee.price }}</strong></p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h2>Customer Comments</h2>
+    <div class="comments">
+        {% for comment in comments %}
+            <div class="comment">
+                <strong>{{ comment.username }}:</strong>
+                <p>{{ comment.text }}</p>
+            </div>
+        {% endfor %}
+    </div>

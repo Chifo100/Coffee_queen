@@ -1,0 +1,15 @@
+#Files that would not be copied to the final Docker Image
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.log
+venv/
+node_modules/
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+*.swp
+
